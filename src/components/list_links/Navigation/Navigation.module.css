@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+.navItem {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+  padding: 15px 0;
+}
+.socialButton {
+  height: 30px;
+  width: 40px;
+}
+.socialIcon {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

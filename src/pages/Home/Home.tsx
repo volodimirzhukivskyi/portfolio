@@ -1,9 +1,12 @@
-import React from 'react'
-
+import React from "react";
+import Preview from "../../components/Preview/Preview";
+import styles from "./Home.module.css";
 function Home() {
   return (
-    <div>Home</div>
-  )
+    <div className={`${styles.homeContainer} container`}>
+      <Preview />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
