@@ -1,13 +1,22 @@
-.title{
+.title {
   font-size: clamp(2.5rem, 0.7rem + 7.68vw, 5.5rem);
   letter-spacing: -0.028em;
   padding-right: 25%;
+  text-align: left;
 }
-.profilePhoto{
+.profilePhoto {
   width: 42vw;
   max-width: 445px;
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
+}
+.text {
+  max-width: 445px;
+  text-align: left;
+}
+.name{
+  border-bottom:10px solid #FF0000;
+border-image:linear-gradient(to right, hsl(153, 71%, 59%) 75%, hsl(153, 71%, 59%) 75%);
 }

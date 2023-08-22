@@ -15,6 +15,9 @@
 .socialButton {
   height: 30px;
   width: 40px;
+  border: none;
+  background: no-repeat;
+  cursor: pointer;
 }
 .socialIcon {
   height: 100%;

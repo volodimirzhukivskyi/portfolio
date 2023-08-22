@@ -5,7 +5,7 @@ function Preview() {
   return (
     <section>
       <h1 className={styles.title}>
-        Nice to meet you! I’m Volodymyr Zhukivskyi.
+        Nice to meet you! I’m <span className={styles.name}>Volodymyr Zhukivskyi</span>.
       </h1>
       <p className={styles.text}>
         Based in the Ukraine/Kyiv, I’m a full-stack developer passionate about
