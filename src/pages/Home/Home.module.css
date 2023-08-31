@@ -1,5 +1,5 @@
-
-.homeContainer{
-    position: relative
-    ;
+.homeContainer {
+  position: relative;
+  padding: 2rem;
+  border-bottom: 1px solid black;
 }

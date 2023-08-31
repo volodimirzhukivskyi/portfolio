@@ -11,6 +11,9 @@
 .link {
   text-decoration: none;
   padding: 15px 0;
+  font-size: clamp(1.2rem, 0.7rem + 3.68vw, 2.5rem);
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
 }
 .socialButton {
   height: 30px;

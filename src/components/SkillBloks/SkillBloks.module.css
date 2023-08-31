@@ -1,0 +1,43 @@
+.actions {
+  display: flex;
+}
+.actions {
+
+}
+.list {
+  margin: 0;
+  border-top: none    ;
+  border-bottom: 10px solid;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  border-width: 5px;
+  border-image-slice: 1;
+}
+.button {
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  flex: 1;
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+  border-right: 10px solid;
+  border-left: 10px solid;
+  border-width: 5px;
+  border-image-slice: 1;
+  transition: flex 0.5s;
+}
+.active {
+  flex: 2;
+  border-bottom: none;
+}
+.front {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  background: none;
+}
+.back {
+  background-color: black;
+  color: white;
+  border-image-source: linear-gradient(45deg, rgb(117, 67, 67), rgb(182, 182, 153));
+}

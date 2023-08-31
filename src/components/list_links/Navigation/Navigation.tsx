@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 function Navigation() {
@@ -23,7 +22,7 @@ function Navigation() {
         <li>
           <button className={styles.socialButton}>
             <svg className={styles.socialIcon}>
-              <use href="/sprite.svg#social"></use>
+              <use href="/sprite.svg#socialIcon"></use>
             </svg>
           </button>
         </li>
