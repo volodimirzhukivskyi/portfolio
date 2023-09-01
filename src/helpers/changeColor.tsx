@@ -1,3 +1,5 @@
+import RandomColorItem from "../components/RandomColorItem/RamdomColorItem";
+
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -7,3 +9,7 @@ export const getRandomColor = () => {
   return color;
 };
 
+export const getColorComponent = (word: string, splitVal = '') => {
+  const splWord = word.split(splitVal);
+ return splWord.map((letter) => <RandomColorItem>{letter}</RandomColorItem>);
+};
