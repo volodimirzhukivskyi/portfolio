@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import NoMatch from "./pages/NoMatch/NoMatch";
+import Social from "./components/list_links/Social/Social";
 
 function App() {
   return (

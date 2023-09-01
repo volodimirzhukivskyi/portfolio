@@ -19,13 +19,7 @@ function Navigation() {
             Dashboard
           </Link>
         </li>
-        <li>
-          <button className={styles.socialButton}>
-            <svg className={styles.socialIcon}>
-              <use href="/sprite.svg#socialIcon"></use>
-            </svg>
-          </button>
-        </li>
+      
       </ul>
     </nav>
   );
