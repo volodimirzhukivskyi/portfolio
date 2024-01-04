@@ -13,7 +13,7 @@ function SkillBloks() {
   };
   return (
     <section className={`${''} container`}>
-      <h2>Experience</h2>
+      <h2 className={styles.title}>Experience</h2>
       <div>
         <div className={styles.actions}>
           <button onClick={() => changeActiveClass(FRONT)} className={`${styles.button} ${styles.front} ${activeFront && styles.active}`}>

@@ -1,14 +1,16 @@
 .actions {
   display: flex;
 }
-.actions {
-
+.title {
+  text-align: left;
+  font-weight: 700;
+  font-size: 46px;
 }
 .list {
   display: grid;
   gap: 20px;
   margin: 0;
-  border-top: none    ;
+  border-top: none;
   border-bottom: 10px solid;
   border-right: 10px solid;
   border-left: 10px solid;
@@ -44,17 +46,15 @@
   color: white;
   border-image-source: linear-gradient(45deg, rgb(117, 67, 67), rgb(182, 182, 153));
 }
-.item{
-  display:flex;
-  gap:20px;
+.item {
+  display: flex;
+  gap: 20px;
   align-items: center;
-
 }
-.text{
+.text {
   font-weight: 500;
   margin: 0;
-
 }
-.categoryTitle{
+.categoryTitle {
   margin: 0;
 }
