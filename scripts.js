@@ -12,16 +12,26 @@ window.addEventListener('load', function () {
 document.addEventListener('DOMContentLoaded', function () {
   const navLinks = document.querySelectorAll('.nav_link');
   const sections = document.querySelectorAll('section');
+  //TODO first link highlighting
 
   window.addEventListener('scroll', function () {
     // Get the current scroll position
-    const scrollPosition = window.scrollY;
+    const scrollPosition = Math.ceil(window.scrollY);
 
     // Iterate over each section to find which one is in the viewport
-    sections.forEach((section) => {
+    sections.forEach((section, i, arr) => {
       const sectionTop = section.offsetTop;
       const sectionHeight = section.clientHeight;
-      if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+
+      console.log('scrollPosition', scrollPosition);
+      console.log('sectionTop', sectionTop);
+      console.log('sectionHeight', sectionHeight);
+      if (scrollPosition === 0) {
+        const activeLink = document.querySelector('.nav_link.active');
+        activeLink?.classList.remove('active');
+        navLinks[0].classList.add('active');
+        console.log(arr[0])
+      } else if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
         // If the section is in the viewport, add 'active' class to the corresponding nav link
         const targetId = '#' + section.getAttribute('id');
         navLinks.forEach((link) => {
@@ -47,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (targetSection) {
         window.scrollTo({
-          top: targetSection.offsetTop , // Scroll to the top position of the target section
+          top: targetSection.offsetTop, // Scroll to the top position of the target section
           ...scrollOptions,
         });
       }
@@ -450,17 +460,21 @@ function loadItemsWithFadeIn() {
 
 loadItemsWithFadeIn();
 
-window.addEventListener('scroll', function () {
-  let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-  let windowHeight = window.innerHeight;
-  let portfolioWrap = document.querySelector('.portfolio_section-wrap');
-  let portfolioWrapHeight = portfolioWrap.clientHeight;
-  let portfolioWrapOffsetTop = portfolioWrap.offsetTop;
+window.addEventListener(
+  'scroll',
+  function () {
+    let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    let windowHeight = window.innerHeight;
+    let portfolioWrap = document.querySelector('.portfolio_section-wrap');
+    let portfolioWrapHeight = portfolioWrap.clientHeight;
+    let portfolioWrapOffsetTop = portfolioWrap.offsetTop;
 
-  if (scrollTop + windowHeight >= portfolioWrapHeight + portfolioWrapOffsetTop - 100) {
-    loadItemsWithFadeIn();
-  }
-},{ passive: true });
+    if (scrollTop + windowHeight >= portfolioWrapHeight + portfolioWrapOffsetTop - 100) {
+      loadItemsWithFadeIn();
+    }
+  },
+  { passive: true }
+);
 
 function fadeIn(element) {
   element.style.opacity = 0;
